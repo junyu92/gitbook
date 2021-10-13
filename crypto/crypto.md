@@ -1,3 +1,3 @@
 # Crypto
 
-* [Public-key cryptography](crypto/public-key-cryptography.md)
+* [Public-key cryptography](./public-key-cryptography.md)
