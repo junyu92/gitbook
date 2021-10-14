@@ -93,3 +93,31 @@ because the XOR of a random string with any fixed string yields a random string.
 ### Reference
 
 * [One-time pad](https://en.wikipedia.org/wiki/One-time_pad)
+
+## Encryption Security
+
+A cipher is secure if, even given a large number of plaintext-ciphertext
+pairs, nothing can be learned about the cipher's behavior when applied
+to other plaintexts or ciphertexts.
+
+This opens up new questions:
+
+* How does an attacker come by these pairs? How large is a "large number"?
+This is all defined by **attack models**, assumptions about what the
+attacker can and cannot do.
+* What chould be "learned" and what "cipher's behavior" are we talking
+about? This is defined by **security goals**, descriptions of what is
+considered a successful attack.
+
+## Asymmetric Encryption
+
+In asymmetric encryption, there are two keys: one to encrypt and another
+to decrypt. The encryption key is called a **public key** and is
+generally considered publicly available to anyone who wants to send you
+encrypted messages. The decryption key, however, must remain secrey and is
+called a **private key**.
+
+The public key can be computed from the private key, but obviously the
+private key can't be computed from the public key. That's the key of
+public-key cryptography, whose functions are easy to compute in one
+direction but practically impossible to invert.
