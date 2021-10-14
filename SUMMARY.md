@@ -1,10 +1,9 @@
 # Table of contents
 
-* [Welcome!](README.md)
-
 ## Crypto
 
-* [Crypto](crypto/crypto.md)
+* [Private-key Cryptography](crypto/private-key-cryptography.md)
+* [Public-key Cryptography](crypto/public-key-cryptography.md)
 
 ## Memory
 
