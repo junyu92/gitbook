@@ -87,7 +87,7 @@ The important thing is that **a one-time pad can only be used one time**.
 
 ### Why Is the One-Time Pad Secure?
 
-If $K$ is random, the resulting $C$ looks as random as $K$ to an attacker
+If $K$ is random, the resulting $C$ looks as random as $$K$$ to an attacker
 because the XOR of a random string with any fixed string yields a random string.
 
 ### Reference
