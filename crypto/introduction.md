@@ -52,7 +52,7 @@ A cipher contains two components:
 * a mode of operation: an algotithm that uses a permutation to process
   messages of arbitraty size.
 
-## The permutation
+### The Permutation
 
 Not every permutation is secure, a cipher's permutation should satisfy three
 criteria:
@@ -62,3 +62,34 @@ A permutation is **secure** if it satisfies three criteria:
 * The permutation should be determinied by the key.
 * Differnet keys should result in different permutations.
 * The permutation should look random.
+
+### The Mode of Operation
+
+The mode of operation of a cipher mitigates the exposure of duplicate
+letters in the plaintext by using different permutations for duplicate letters.
+
+## The One-Time Pad: Perfect but not practical
+
+### Encryption with the One-Time Pad
+
+The one-time pad takes a plaintext, $P$, and a random key, $k$, that's the
+same length as $P$ and produces a ciphertext $C$, defined as
+
+$C = P \oplus K$
+
+where $C$, $P$, and $K$ are bit strings of the same length and where
+$\oplus$ is the bitwise exclusive OR operation (XOR), defined as
+$0 \oplus 0 = 0$, $0 \oplus 1 = 1$, $1 \oplus 0 = 1$, $1 \oplus 1 = 0$.
+
+The one-time pad's decryption is identical to encryption.
+
+The important thing is that **a one-time pad can only be used one time**.
+
+### Why Is the One-Time Pad Secure?
+
+If $K$ is random, the resulting $C$ looks as random as $K$ to an attacker
+because the XOR of a random string with any fixed string yields a random string.
+
+### Reference
+
+* [One-time pad](https://en.wikipedia.org/wiki/One-time_pad)
