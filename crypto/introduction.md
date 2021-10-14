@@ -44,3 +44,21 @@ For example, if the key is DUH, letters in the plaintext are shifted using
   language
 
 ## How Ciphers Work
+
+A cipher contains two components:
+
+* a permutation: a function that transforms an item such that each item
+  has a unique inverse.
+* a mode of operation: an algotithm that uses a permutation to process
+  messages of arbitraty size.
+
+## The permutation
+
+Not every permutation is secure, a cipher's permutation should satisfy three
+criteria:
+
+A permutation is **secure** if it satisfies three criteria:
+
+* The permutation should be determinied by the key.
+* Differnet keys should result in different permutations.
+* The permutation should look random.
