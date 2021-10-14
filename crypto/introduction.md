@@ -9,10 +9,10 @@ different from the key used to encrypt.
 ## A basic form of symmetric encryption
 
 encryption:
-$C = E(K, P)$ where $C$ is a ciphertext, $K$ is a key and $P$ is a plaintext.
+$$C = E(K, P)$$ where $$C$$ is a ciphertext, $$K$$ is a key and $$P$$ is a plaintext.
 
 decryption:
-$P = D(K, C)$
+$$P = D(K, C)$$
 
 For some ciphers, the ciphertext is the same size as the plaintext; for some
 others, the ciphertext is slightly longer. However, ciphertext can never be
@@ -30,7 +30,7 @@ alphabet, wrapping back around to A if the shift reaches Z.
 ### The Vigenère cipher
 
 The Vigenère cipher is similar to the Caesar Cipher, except the letters aren't
-shifted by three place but rather by values defined by a $key$, a collection
+shifted by three place but rather by values defined by a $$key$$, a collection
 of letters that represent numbers based on their position in the alphabet.
 
 For example, if the key is DUH, letters in the plaintext are shifted using
@@ -72,14 +72,14 @@ letters in the plaintext by using different permutations for duplicate letters.
 
 ### Encryption with the One-Time Pad
 
-The one-time pad takes a plaintext, $P$, and a random key, $k$, that's the
-same length as $P$ and produces a ciphertext $C$, defined as
+The one-time pad takes a plaintext, $$P$$, and a random key, $$k$$, that's the
+same length as $$P$$ and produces a ciphertext $$C$$, defined as
 
-$C = P \oplus K$
+$$C = P \oplus K$$
 
-where $C$, $P$, and $K$ are bit strings of the same length and where
-$\oplus$ is the bitwise exclusive OR operation (XOR), defined as
-$0 \oplus 0 = 0$, $0 \oplus 1 = 1$, $1 \oplus 0 = 1$, $1 \oplus 1 = 0$.
+where $$C$$, $$P$$, and $$K$$ are bit strings of the same length and where
+$$\oplus$$ is the bitwise exclusive OR operation (XOR), defined as
+$$0 \oplus 0 = 0$$, $$0 \oplus 1 = 1$$, $$1 \oplus 0 = 1$$, $$1 \oplus 1 = 0$$.
 
 The one-time pad's decryption is identical to encryption.
 
@@ -87,7 +87,7 @@ The important thing is that **a one-time pad can only be used one time**.
 
 ### Why Is the One-Time Pad Secure?
 
-If $K$ is random, the resulting $C$ looks as random as $$K$$ to an attacker
+If $$K$$ is random, the resulting $$C$$ looks as random as $$K$$ to an attacker
 because the XOR of a random string with any fixed string yields a random string.
 
 ### Reference
