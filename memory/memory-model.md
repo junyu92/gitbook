@@ -187,7 +187,10 @@ void memory_region_transaction_commit(void)
 ```
 memory_region_transaction_commit
 |- flatviews_reset
-   |-
+   |- flatviews_init: create a global hash table to cache flatview infomation
+   |- generate_memory_topology: render a root MemoryRegion's topology into a list of disjoint absolute ranges
+      |- render_memory_region: recursively create MemoryRegion and insert into FlatView
+      |- flatview_simplify: normalize flatview
 |- address_space_set_flatview: update FlatView for AddressSpace
    |- address_space_update_topology_pass: compares old flatview and new flatview and invokes callback
 ```
