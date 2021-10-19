@@ -13,9 +13,24 @@ It is a tree strucutre.
                    +---------------+
                    | subregions    |
                    +---------------+
-		          |
-			  V
 ```
+
+There are multiple types of MemoryRegions:
+
+* RAM: a range of host memory that can be made available to the guest.
+* MMIO: a range of guest memory that is implemented by host callbacks;
+  each read or write causes a callback to be called on the host.
+* ROM: a ROM memory region works like RAM for reads, and forbids writes.
+* ROM device: a ROM device memory region works like RAM for reads, but
+  like MMIO for writes.
+* IOMMU region: an IOMMU region translates addresses of accesses made to
+  it and forwards them to some other target memory region.
+* container: a container simply includes other memory regions, each at
+  a different offset. Containers are useful for grouping several regions
+  into one unit. For example, a PCI BAR may be composed of a RAM region
+  and an MMIO region.
+* alias: a subsection of another region.
+* reservation region: a reservation region is primarily for debugging.
 
 ```c
 struct MemoryRegion {
