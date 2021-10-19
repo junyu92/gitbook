@@ -1,5 +1,7 @@
 # Table of contents
 
+* [README](README.md)
+
 ## Crypto
 
 * [Introduction](crypto/introduction.md)
@@ -10,3 +12,7 @@
 ## Memory
 
 * [Memory Model](memory/memory-model.md)
+
+## PCI
+
+* [PCI Bridge](pci/pci-bridge.md)
